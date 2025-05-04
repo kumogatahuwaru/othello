@@ -17,6 +17,9 @@ export default function Home() {
   ]);
 
   const clickHandler = (x: number, y: number) => {
+    if (board[y][x] !== 0) {
+      return;
+    }
     const newBoard = structuredClone(board);
     //おける・右上
     if (board[y - 1] !== undefined && board[y - 2] !== undefined) {
