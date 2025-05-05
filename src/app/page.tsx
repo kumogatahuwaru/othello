@@ -152,6 +152,7 @@ export default function Home() {
         }
       }
     }
+    //左下おく
     if (board[y + 1] !== undefined && board[y + 2] !== undefined) {
       if (board[x - 1] !== undefined && board[x - 2] !== undefined) {
         if (board[y + 1][x - 1] === 2 / turnColor && board[y + 2][x - 2] === turnColor) {
@@ -282,6 +283,7 @@ export default function Home() {
         }
       }
     }
+    //左上おく
     if (board[y - 1] !== undefined && board[y - 2] !== undefined) {
       if (board[x - 1] !== undefined && board[x - 2] !== undefined) {
         if (board[y - 1][x - 1] === 2 / turnColor && board[y - 2][x - 2] === turnColor) {
@@ -412,6 +414,7 @@ export default function Home() {
         }
       }
     }
+    //右下おく
     if (board[y + 1] !== undefined && board[y + 2] !== undefined) {
       if (board[x + 1] !== undefined && board[x + 2] !== undefined) {
         if (board[y + 1][x + 1] === 2 / turnColor && board[y + 2][x + 2] === turnColor) {
@@ -542,7 +545,7 @@ export default function Home() {
         }
       }
     }
-
+    //横におく(1)
     if (board[x - 1] !== undefined && board[y][x - 1] === 2 / turnColor) {
       if (board[x - 2] !== undefined && board[y][x - 2] === turnColor) {
         newBoard[y][x] = turnColor;
@@ -599,7 +602,7 @@ export default function Home() {
         setTurnColor(2 / turnColor);
       }
     }
-
+    //横におく(2)
     if (board[x + 1] !== undefined && board[y][x + 1] === 2 / turnColor) {
       if (board[x + 2] !== undefined && board[y][x + 2] === turnColor) {
         newBoard[y][x] = turnColor;
@@ -656,7 +659,7 @@ export default function Home() {
         setTurnColor(2 / turnColor);
       }
     }
-
+    //縦におく(1)
     if (board[y + 1] !== undefined && board[y + 1][x] === 2 / turnColor) {
       if (board[y + 2] !== undefined && board[y + 2][x] === turnColor) {
         newBoard[y][x] = turnColor;
@@ -713,7 +716,7 @@ export default function Home() {
         setTurnColor(2 / turnColor);
       }
     }
-
+    // 縦におく(2)
     if (board[y - 1] !== undefined && board[y - 1][x] === 2 / turnColor) {
       if (board[y - 2] !== undefined && board[y - 2][x] === turnColor) {
         newBoard[y][x] = turnColor;
@@ -770,7 +773,7 @@ export default function Home() {
         setTurnColor(2 / turnColor);
       }
     }
-
+    //横めくり(1)
     if (board[x + 1] !== undefined && board[y][x + 1] === 2 / turnColor) {
       if (
         board[x + 2] !== undefined &&
@@ -868,6 +871,7 @@ export default function Home() {
         }
       }
     }
+    //横めくり(2)
     if (board[x - 1] !== undefined && board[y][x - 1] === 2 / turnColor) {
       if (
         board[x - 2] !== undefined &&
@@ -965,7 +969,7 @@ export default function Home() {
         }
       }
     }
-
+    //縦めくり(1)
     if (board[y + 1] !== undefined && board[y + 1][x] === 2 / turnColor) {
       if (board[y + 2] !== undefined) {
         if (board[y + 2][x] === turnColor && newBoard[y][x] === turnColor) {
@@ -1061,6 +1065,7 @@ export default function Home() {
         }
       }
     }
+    //縦めくり(2)
     if (board[y - 1] !== undefined && board[y - 1][x] === 2 / turnColor) {
       if (
         board[y - 2] !== undefined &&
@@ -1158,6 +1163,7 @@ export default function Home() {
         }
       }
     }
+    //左下めくり
     if (board[y + 1] !== undefined && board[y + 2] !== undefined) {
       if (board[x - 1] !== undefined && board[x - 2] !== undefined) {
         if (
@@ -1317,7 +1323,7 @@ export default function Home() {
         }
       }
     }
-
+    //右下めくり
     if (board[y + 1] !== undefined && board[y + 2] !== undefined) {
       if (board[x + 1] !== undefined && board[x + 2] !== undefined) {
         if (
@@ -1466,7 +1472,7 @@ export default function Home() {
         }
       }
     }
-
+    //左上めくり
     if (board[y - 1] !== undefined && board[y - 2] !== undefined) {
       if (board[x - 1] !== undefined && board[x - 2] !== undefined) {
         if (
@@ -1615,6 +1621,7 @@ export default function Home() {
         }
       }
     }
+    //右上めくり
     if (board[y - 1] !== undefined && board[y - 2] !== undefined) {
       if (board[x + 1] !== undefined && board[x + 2] !== undefined) {
         if (
